@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <title>Test LuckyGroup</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <form class="form container" action="https://echo.htmlacademy.ru">
+    <div class="form__left">
+      <h2>Reduslim</h2>
+      <h2>ECO</h2>
+    </div>
+    <div class="form__right">
+      <h1>
+        Сделай шаг <br>к выздоровлению
+      </h1>
+      <div class="form__field form__field_name">
+        <label for="name">Ваше <span class="form__label-green">Имя</span></label>
+        <input id="name" type="text" placeholder="Алексей" required="" name="name">
+      </div>
+      <div class="form__phone-wrapper">
+        <div class="form__field form__field_phone">
+          <label for="phone">Ваш <span class="form__label-green">Телефон</span></label>
+          <input id="phone" type="tel" placeholder="+7 (123) 456 78-90" name="number">
+        </div>
+        <a class="form__field form__field_country" tabindex="0">
+          <input class="form__input-country-hidden visually-hidden" type="text" name="country">
+          <div class="form__select">
+            <span>RU</span>
+            <img src="/img/ru.png" alt="Russia" width="26" height="18">
+            <svg width="8" height="4">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow-down"></use>
+            </svg>
+          </div>
+          <ul class="form__country-list visually-hidden">
+            <li class="form__country-item">
+              <span>RU</span>
+              <img src="/img/ru.png" alt="Russia" width="26" height="18">
+            </li>
+            <li class="form__country-item">
+              <span>US</span>
+              <img src="/img/united-states.png" alt="US" width="26" height="18">
+            </li>
+            <li class="form__country-item">
+              <span>UK</span>
+              <img src="/img/united-kingdom.png" alt="UK" width="26" height="18">
+            </li>
+          </ul>
+        </a>
+      </div>
+      <button type="submit">
+        Заказать
+        <svg width="15" height="10">
+          <use xlink:href="img/sprite_auto.svg#icon-vector"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="form__secure-mobile">
+      <span>Trusted</span>
+      <svg width="12" height="14">
+        <use xlink:href="img/sprite_auto.svg#icon-lock"></use>
+      </svg>
+      <span>Secure</span>
+    </div>
+
+  </form>
+
+  <script src="js/country.js"></script>
+</body>
+
+</html>

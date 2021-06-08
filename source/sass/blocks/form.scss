@@ -1,0 +1,375 @@
+.form {
+  position: relative;
+  display: flex;
+  margin-top: 75px;
+  min-height: 500px;
+  background-color: $white;
+  font-family: $base-font;
+  overflow: hidden;
+  box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
+  border-radius: 1px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 32px;
+    left: 57px;
+    display: block;
+    width: 465px;
+    height: 255px;
+    z-index: 10;
+    background-image: url("../img/tablets_desktop.png");
+
+    @include mobile {
+      width: 223px;
+      height: 122px;
+      background-image: url("../img/tablets_mobile.png");
+      bottom: initial;
+      left: 56px;
+      top: 120px;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.form__left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  height: 100%;
+  padding: 40px;
+  padding-bottom: 20px;
+  background: linear-gradient(180deg, $green 0%, #35734F 100%);
+  border-radius: 1px;
+  overflow: hidden;
+
+  @include mobile {
+    width: 100%;
+    flex-direction: row;
+    background: $white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 33px;
+    left: 23px;
+    content: "";
+    display: block;
+    width: 398px;
+    height: 398px;
+    background-color: $green;
+    border-radius: 50%;
+    z-index: 2;
+
+    @include mobile {
+      width: 202px;
+      height: 202px;
+      margin: auto;
+      bottom: initial;
+      top: 72px;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -101px;
+    left: 234px;
+    display: block;
+    width: 688px;
+    height: 688px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 20px solid $white-opacity;
+    z-index: 1;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.form__left img {
+  position: absolute;
+  display: block;
+  z-index: 5;
+  bottom: 45px;
+  left: 65px;
+}
+
+.form__left h2 {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: $white;
+
+  @include mobile {
+    color: $black;
+    min-height: 250px;
+  }
+}
+
+.form__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 560px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.form h1 {
+  margin: 0;
+  margin-bottom: 52px;
+  padding: 29px 128px;
+  background-color: $grey-light;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+  color: $black;
+
+  @include mobile {
+    background: none;
+    padding: 0;
+    margin-bottom: 27px;
+    margin-top: 7px;
+  }
+
+  br {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form__phone-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 320px;
+
+  @include mobile {
+    width: 280px;
+  }
+}
+
+.form__right button {
+  width: 320px;
+  height: 42px;
+  margin-top: 18px;
+  color: $white;
+  background-color: $green;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $base-font;
+  outline: none;
+  margin-bottom: 28px;
+
+  svg {
+    margin-left: 7px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  @include mobile {
+    width: 280px;
+    margin-top: 8px;
+  }
+}
+
+.form label {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  color: $black;
+  margin-bottom: 10px;
+}
+
+.form__label-green {
+  color: $green;
+  margin-left: 2px;
+
+  @include mobile {
+    margin-left: 4px;
+  }
+}
+
+.form__field input {
+  height: 50px;
+  padding: 16px 20px;
+  border-radius: 5px;
+  background: $grey-light;
+  border: 1px solid $grey-dark;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: $black;
+  }
+
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.form__field_name input {
+  width: 320px;
+
+  @include mobile {
+    width: 280px;
+  }
+}
+
+.form__field_phone {
+  width: 184px;
+
+  @include mobile {
+    width: 174px;
+  }
+}
+
+.form__select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 116px;
+  height: 50px;
+  padding: 16px 19px;
+  border-radius: 5px;
+  background: $grey-light;
+  border: 1px solid $grey-dark;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+
+  @include mobile {
+    width: 96px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.form__field input::placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-opacity;
+  appearance: none;
+}
+
+.form__field input::-webkit-input-placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-opacity;
+  appearance: none;
+}
+
+.form__field input::-moz-placeholder {
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-opacity;
+  appearance: none;
+}
+
+.form__secure-mobile {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 80px;
+    background-color: $grey-light;
+  }
+}
+
+.form__secure-mobile  svg {
+  fill: transparent;
+}
+
+.form__secure-mobile span {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.form__field_country {
+  position: relative;
+  outline: none;
+}
+
+.form__field_country:hover .form__select,
+.form__field_country:focus .form__select {
+  border-color: $black;
+}
+
+.form__country-list {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 116px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  background: $white;
+  border: 1px solid $grey-dark;
+  border-radius: 5px;
+
+  @include mobile {
+    width: 96px;
+  }
+}
+
+.form__country-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-bottom: 1px solid $grey;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black;
+}
